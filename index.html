@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderly Tour and Travels - Explore World Destinations</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/manifest.json">
+</head>
+<body>
+    <header>
+        <a href="#home" class="logo">
+            <div class="logo-icon">
+                <i class="fas fa-plane"></i>
+            </div>
+            <div class="logo-text">
+                <span class="logo-main">Wanderly: Tour And Travel</span>
+                <span class="logo-sub">EXPLORE THE WORLD</span>
+            </div>
+        </a>
+        <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#deals" class="nav-cta">Special Deals</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+        
+        <!-- Featured Destinations Section -->
+        <section id="featured-destinations" class="destinations">
+                <h2>Featured Destinations</h2>
+                <div class="destination-grid">
+                    <!-- Featured Bali -->
+                    <div class="destination-card">
+                        <div class="destination-image">
+                            <img src="bali-for-digital-nomads.jpg" alt="Bali, Indonesia">
+                        </div>
+                        <div class="destination-info">
+                            <h3>Bali Paradise Escape</h3>
+                            <div class="destination-meta">
+                                <span><i class="fas fa-calendar-alt"></i> 7 Days</span>
+                                <span><i class="fas fa-users"></i> Group Tour</span>
+                            </div>
+                            <p>Experience the magical island of Bali with its stunning beaches, vibrant culture, and lush landscapes.</p>
+                            <div class="price">1,07,000</div>
+                            <a href="#" class="btn">View Package</a>
+                        </div>
+                    </div>
+        
+                    <!-- Featured Paris -->
+                    <div class="destination-card">
+                        <div class="destination-image">
+                            <img src="paris.jpg" alt="Paris, France">
+                        </div>
+                        <div class="destination-info">
+                            <h3>Romantic Paris Getaway</h3>
+                            <div class="destination-meta">
+                                <span><i class="fas fa-calendar-alt"></i> 5 Days</span>
+                                <span><i class="fas fa-users"></i> Private Tour</span>
+                            </div>
+                            <p>Discover the City of Love with visits to the Eiffel Tower, Louvre, and charming Montmartre.</p>
+                            <div class="price">1,58,000</div>
+                            <a href="#" class="btn">View Package</a>
+                        </div>
+                    </div>
+        
+                    <!-- Featured Tokyo -->
+                    <div class="destination-card">
+                        <div class="destination-image">
+                            <img src="tokyo.jpg" alt="Tokyo, Japan">
+                        </div>
+                        <div class="destination-info">
+                            <h3>Tokyo Cultural Adventure</h3>
+                            <div class="destination-meta">
+                                <span><i class="fas fa-calendar-alt"></i> 8 Days</span>
+                                <span><i class="fas fa-users"></i> Small Group</span>
+                            </div>
+                            <p>Immerse yourself in Tokyo's unique blend of traditional culture and futuristic innovation.</p>
+                            <div class="price">1,83,000</div>
+                            <a href="#" class="btn">View Package</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Contact Form Section -->
+            <section id="contact" class="contact-form">
+                <!-- Contact form as before -->
+            </section>
+            
+           <section id="contact" class="contact-form">
+                <h2>We'd love to hear from you!</h2>
+                <p>Fill out the form below to send us a message or request more information about our travel destinations.</p>
+                <form>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                    <select id="destination" name="destination" required>
+                        <option value="">Select Destination</option>
+                        <option value="Bali">Bali</option>
+                        <option value="Paris">Paris</option>
+                    </select>
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
+        
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Wanderly</h3>
+                <p>Your dream journey starts here.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Wanderly. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Service Worker and Manifest Script -->
+    <script>
+       if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js')
+      .then((registration) => {
+        console.log('Service Worker registered with scope:', registration.scope);
+      })
+      .catch((error) => {
+        console.error('Service Worker registration failed:', error);
+      });
+  });
+}
+
+      </script>
+      
+</body>
+</html>
